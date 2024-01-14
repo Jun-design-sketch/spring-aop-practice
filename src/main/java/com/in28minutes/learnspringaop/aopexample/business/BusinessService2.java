@@ -4,19 +4,19 @@ import java.util.Arrays;
 
 import org.springframework.stereotype.Service;
 
-import com.in28minutes.learnspringaop.aopexample.data.DataService1;
+import com.in28minutes.learnspringaop.aopexample.data.DataService2;
 
 @Service
-public class BusinessService1 {
+public class BusinessService2 {
 
-	private DataService1 dataService1;
+	private DataService2 dataService2;
 	
-	public BusinessService1(DataService1 dataService1) {
-		this.dataService1 = dataService1;
+	public BusinessService2(DataService2 dataService2) {
+		this.dataService2 = dataService2;
 	}
 	
-	public int calculateMax() {
-		int[] data = dataService1.retrieveData();
+	public int calculateMin() {
+		int[] data = dataService2.retrieveData();
 		try {
 			Thread.sleep(30);
 		} catch (InterruptedException e) {
@@ -24,7 +24,7 @@ public class BusinessService1 {
 			e.printStackTrace();
 		}
 		// throw new RuntimeException("Something went wrong");
-		return Arrays.stream(data).max().orElse(0);
+		return Arrays.stream(data).min().orElse(0);
 	}
 	// Business Logic
 	// Data

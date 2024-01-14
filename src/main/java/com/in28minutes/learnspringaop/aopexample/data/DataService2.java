@@ -3,7 +3,7 @@ package com.in28minutes.learnspringaop.aopexample.data;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public class DataService1 {
+public class DataService2 {
 	
 	public int[] retrieveData() {
 		try {
@@ -13,6 +13,6 @@ public class DataService1 {
 			e.printStackTrace();
 		}
 
-		return new int[] {11, 22, 33, 44, 55};
+		return new int[] {111, 222, 333, 444, 555};
 	}
 }
